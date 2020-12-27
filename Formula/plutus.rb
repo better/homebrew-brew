@@ -1,6 +1,7 @@
 class Plutus < Formula
   desc "plutus-cli"
   homepage "https://better.com"
+  version "0.28.7"
 
   on_macos do
     url "https://plutus-cli.s3.amazonaws.com/plutus-v0.28.7/plutus-v0.28.7-darwin-x64.tar.gz"
