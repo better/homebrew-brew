@@ -1,5 +1,4 @@
 # Better Brew
-brew tap for better things
 
 ## How do I install these formulae?
 `brew install better/brew/<formula>`
