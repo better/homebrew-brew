@@ -5,12 +5,12 @@ class Plutus < Formula
 
   on_macos do
     url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-darwin-x64.tar.gz"
-    sha256 "00401b74addcddda1fb8c63a82d21ebe1a962a406679f2a22c4f5635cb4eab65"
+    sha256 "dcf728e74432848103613417c23c34d73cc6477ca44c14740c945edc295e5e2b"
   end
   
   on_linux do
     url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-linux-x64.tar.gz"
-    sha256 "00ff2217eb75853d7482887aabb00310239952ed1fbd895f6b55cf6d830c9e2d"
+    sha256 "272792acb9fd542ecff27c9c255eb10e93cadcc9b46f36c34d5faaec4e9d67bd"
   end
 
   def install
