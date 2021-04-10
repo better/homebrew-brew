@@ -9,3 +9,5 @@ update: export MACOS_SHA256 := $(call get-manifest-value,darwin-x64,sha256gz)
 update: export LINUX_SHA256 := $(call get-manifest-value,linux-x64,sha256gz)
 update:
 	cat templates/plutus.tpl | envsubst > Formula/plutus.rb
+	git commit -a -m 'auto update ${PLUTUS_VERSION}'
+	git push
