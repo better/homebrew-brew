@@ -1,0 +1,3 @@
+steps:
+  - label: update
+    command: make update
