@@ -1,16 +1,16 @@
 class Plutus < Formula
   desc "plutus-cli"
   homepage "https://better.com"
-  version "0.43.0"
+  version "0.43.1"
 
   on_macos do
     url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-darwin-x64.tar.gz"
-    sha256 "b8304b61e9c30b9696e45b7efa72589edda86d9f3ec68f8fd638147cb2c47d7f"
+    sha256 "e5117aba1601e93c1f4f9fe124fd506eba61e3c10bd941d0afeab76378199be4"
   end
   
   on_linux do
     url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-linux-x64.tar.gz"
-    sha256 "feb02ff03030543c2be35bcdd5eea3f9c2819544f9876db9ae338c7bb2fa8f3f"
+    sha256 "45256ace6796401fc08b6850fe4e0d587f0c370efe0477c32c6344da9cfdc532"
   end
 
   def install
