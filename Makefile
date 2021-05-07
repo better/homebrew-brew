@@ -22,7 +22,7 @@ update-plutus-bin: export MACOS_BIN_SHA256 := $(call get-manifest-value,darwin-x
 update-plutus-bin: export MACOS_BIN_URL := $(call get-manifest-value,darwin-x64,bin)
 update-plutus-bin: export LINUX_BIN_SHA256 := $(call get-manifest-value,linux-x64,sha256bin)
 update-plutus-bin: export LINUX_BIN_URL := $(call get-manifest-value,linux-x64,bin)
-update-plutus-bin: export DOLLAR := '$'
+update-plutus-bin: export DOLLAR := "$$"
 update-plutus-bin: git-setup
 	cat templates/plutus-bin.tpl | envsubst > Formula/plutus-bin.rb
 	git commit -a -m 'auto update plutus-bin ${PLUTUS_VERSION} [skip ci]' && git push origin HEAD:main || echo 'nothing to update'
