@@ -1,5 +1,5 @@
 class Plutus < Formula
-  desc "plutus-cli"
+  desc "plutus-cli from source"
   homepage "https://better.com"
   version "0.45.3"
 
