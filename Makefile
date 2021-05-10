@@ -17,7 +17,7 @@ update-plutus: export LINUX_BIN_SHA256 := $(call get-manifest-value,linux-x64,sh
 update-plutus: export LINUX_BIN_URL := $(call get-manifest-value,linux-x64,bin)
 update-plutus: export DOLLAR := $$
 update-plutus: git-setup
-	cat templates/plutus-bin.tpl | envsubst > Formula/plutus-bin.rb
+	cat templates/plutus.tpl | envsubst > Formula/plutus.rb
 	git commit -a -m 'auto update plutus ${PLUTUS_VERSION} [skip ci]' && git push origin HEAD:main || echo 'nothing to update'
 
 update: update-plutus
