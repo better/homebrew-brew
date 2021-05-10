@@ -1,28 +1,25 @@
 class Plutus < Formula
-  desc "plutus-cli from binaries"
+  desc "plutus-cli from source"
   homepage "https://better.com"
   version "0.46.5"
 
   on_macos do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.5/bin/darwin-x64", :using => :nounzip
-    sha256 "3ed0fb5e883bec7d1d1b7b1697b21e8394bbef6e778ec8b5a20e629e4f688aee"
-    $executable_name = "darwin-x64"
+    url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-darwin-x64.tar.gz"
+    sha256 "97af4a09ae5b455f7434e71df5483e793fee7243d6f7ffdeb9308fa5f7556842"
   end
   
   on_linux do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.5/bin/linux-x64", :using => :nounzip
-    sha256 "826130c3a345fec281b6c69ab083681d041ddd001a44de0aad9dd5fafd24ca7b"
-    $executable_name = "linux-x64"
+    url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-linux-x64.tar.gz"
+    sha256 "51725d98c4c2d106f17b9ad05d2bdcadc2cd934ae5283cad1db69a5cfa2aab7a"
   end
 
   def install
-    mv $executable_name, name
-    system "chmod", "+x", name
-    libexec.install name
-    bin.install_symlink libexec/name
+    inreplace "bin/plutus", /^CLIENT_HOME=/, "export PLUTUS_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"bin/plutus"
   end
 
   test do
-    system bin/name, "version"
+    system bin/"plutus", "version"
   end
 end
