@@ -1,17 +1,17 @@
 class Plutus < Formula
   desc "plutus-cli from binaries"
   homepage "https://better.com"
-  version "0.46.4"
+  version "0.46.5"
 
   on_macos do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.4/bin/darwin-x64", :using => :nounzip
-    sha256 "1eac36efadd5153e8d31fe83d4e9114a9b12de658a86ad9737298d11b13ac87d"
+    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.5/bin/darwin-x64", :using => :nounzip
+    sha256 "3ed0fb5e883bec7d1d1b7b1697b21e8394bbef6e778ec8b5a20e629e4f688aee"
     $executable_name = "darwin-x64"
   end
   
   on_linux do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.4/bin/linux-x64", :using => :nounzip
-    sha256 "5577d0a96806f579681546ee961473cc6c0677f93f4faba0a054fe5a08e99cb1"
+    url "https://plutus-cli.s3.amazonaws.com/plutus-v0.46.5/bin/linux-x64", :using => :nounzip
+    sha256 "826130c3a345fec281b6c69ab083681d041ddd001a44de0aad9dd5fafd24ca7b"
     $executable_name = "linux-x64"
   end
 
