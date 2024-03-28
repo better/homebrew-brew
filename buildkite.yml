@@ -1,8 +1,8 @@
 steps:
   - label: git auth
     commands:
-      - "env"
-      - "ssh -T git@github.com"
+      - make git-setup
+      - ssh -T git@github.com
     branches: '!master'
   - label: update
     command: make update
