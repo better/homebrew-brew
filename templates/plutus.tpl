@@ -4,12 +4,12 @@ class Plutus < Formula
   version "$PLUTUS_VERSION"
 
   on_macos do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-darwin-x64.tar.gz"
+    url "$MACOS_GZ_URL"
     sha256 "$MACOS_GZ_SHA256"
   end
 
   on_linux do
-    url "https://plutus-cli.s3.amazonaws.com/plutus-v#{version}/plutus-v#{version}-linux-x64.tar.gz"
+    url "$LINUX_GZ_URL"
     sha256 "$LINUX_GZ_SHA256"
   end
 
