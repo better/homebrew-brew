@@ -4,13 +4,13 @@ class Plutus < Formula
   version "5.0.0"
 
   on_macos do
-    url "https://plutus-cli.s3.amazonaws.com/versions/5.0.0/f34d61c4e/plutus-v5.0.0-f34d61c4e-darwin-x64.tar.gz"
-    sha256 "b0d0ffe8d982b8ff8e1c3b4196c517f479a4753880a0c009b71cdfc7ce0eb8f6"
+    url "https://plutus-cli.s3.amazonaws.com/versions/5.0.0/da3b24b3b/plutus-v5.0.0-da3b24b3b-darwin-x64.tar.gz"
+    sha256 "59e5904ef2fbd2d88ebb98328e49c446105ebea209104e713c29bb2be27cf1e1"
   end
 
   on_linux do
-    url "https://plutus-cli.s3.amazonaws.com/versions/5.0.0/f34d61c4e/plutus-v5.0.0-f34d61c4e-linux-x64.tar.gz"
-    sha256 "38b7d9d8d3aa0843c036cd79f84524cfb23a6df23ebdcdec6096a7f9b8f3e3f9"
+    url "https://plutus-cli.s3.amazonaws.com/versions/5.0.0/da3b24b3b/plutus-v5.0.0-da3b24b3b-linux-x64.tar.gz"
+    sha256 "95c5207a4bbb64fde0bbb663f2cc9d3abe0fd0325e5025cc77e41770073defa7"
   end
 
   depends_on "coreutils"
