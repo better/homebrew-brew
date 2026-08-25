@@ -1,6 +1,6 @@
 s3-bucket := https://plutus-cli.s3.amazonaws.com
 
-_darwin-manifest := $(shell curl -s $(s3-bucket)/channels/stable/plutus-darwin-x64-buildmanifest)
+_darwin-manifest := $(shell curl -s $(s3-bucket)/channels/stable/plutus-darwin-arm64-buildmanifest)
 _linux-manifest  := $(shell curl -s $(s3-bucket)/channels/stable/plutus-linux-x64-buildmanifest)
 
 git-setup:
